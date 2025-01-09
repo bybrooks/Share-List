@@ -5,10 +5,12 @@
   "type": "module",
   "scripts": {
     "build": "remix vite:build",
-    "dev": "remix vite:dev",
+    "dev": "remix vite:dev --host",
     "typecheck": "tsc"
   },
   "dependencies": {
+    "@epic-web/remember": "^1.1.0",
+    "@prisma/client": "^6.2.1",
     "@remix-run/node": "2.10.0",
     "@remix-run/react": "2.10.0",
     "@remix-run/server-runtime": "2.10.0",
@@ -16,7 +18,8 @@
     "@vercel/remix": "2.10.0",
     "isbot": "^4",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "uuid": "^11.0.4"
   },
   "devDependencies": {
     "@remix-run/dev": "2.10.0",

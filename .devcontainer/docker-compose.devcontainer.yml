@@ -1,0 +1,18 @@
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile.devcontainer
+    container_name: share-list
+    environment:
+      - PORT=8080
+    volumes:
+      - type: bind
+        source: ../
+        target: /app
+        consistency: consistent
+    ports:
+      - "8080:8080"
+    env_file:
+      - ../.env
+    command: /bin/sh -c "while sleep 1000; do :; done"
