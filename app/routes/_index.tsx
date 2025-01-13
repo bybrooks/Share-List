@@ -6,7 +6,8 @@ import {
 } from "@remix-run/node";
 import { Form } from "@remix-run/react";
 import { v4 as uuidv4 } from "uuid";
-import { prisma } from "~/utils/db.server";
+import { prisma } from "@/utils/db.server";
+import { Button } from "@/components/ui/button";
 
 export const loader: LoaderFunction = async () => {
   const shoppingList = await prisma.shop.findMany();
@@ -20,10 +21,10 @@ export const action: ActionFunction = async () => {
 
 export default function Index() {
   return (
-    <div>
-      <Form method="post">
-        <button type="submit">New</button>
-      </Form>
-    </div>
+    <Form method="post">
+      <Button variant="outline" size="sm">
+        New
+      </Button>
+    </Form>
   );
 }

@@ -5,7 +5,7 @@ import {
 } from "@remix-run/node";
 import { useLoaderData, Form, useSubmit } from "@remix-run/react";
 import { useState } from "react";
-import { prisma } from "~/utils/db.server";
+import { prisma } from "@/utils/db.server";
 
 interface ShoppingList {
   id: string;

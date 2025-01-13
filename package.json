@@ -11,6 +11,8 @@
   "dependencies": {
     "@epic-web/remember": "^1.1.0",
     "@prisma/client": "^6.2.1",
+    "@radix-ui/react-slot": "^1.1.1",
+    "@remix-run/css-bundle": "^2.15.2",
     "@remix-run/node": "2.10.0",
     "@remix-run/react": "2.10.0",
     "@remix-run/server-runtime": "2.10.0",
