@@ -16,9 +16,14 @@
     "@remix-run/server-runtime": "2.10.0",
     "@vercel/analytics": "^1.2.2",
     "@vercel/remix": "2.10.0",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
     "isbot": "^4",
+    "lucide-react": "^0.471.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "tailwind-merge": "^2.6.0",
+    "tailwindcss-animate": "^1.0.7",
     "uuid": "^11.0.4"
   },
   "devDependencies": {
