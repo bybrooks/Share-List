@@ -21,10 +21,12 @@ export const action: ActionFunction = async () => {
 
 export default function Index() {
   return (
-    <Form method="post">
-      <Button variant="outline" size="sm">
-        New
-      </Button>
-    </Form>
+    <div className="p-4">
+      <Form method="post">
+        <Button variant="outline" size="sm">
+          New
+        </Button>
+      </Form>
+    </div>
   );
 }

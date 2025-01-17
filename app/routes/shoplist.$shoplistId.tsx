@@ -6,6 +6,8 @@ import {
 import { useLoaderData, Form, useSubmit } from "@remix-run/react";
 import { useState } from "react";
 import { prisma } from "@/utils/db.server";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 
 interface ShoppingList {
   id: string;
@@ -73,28 +75,21 @@ export default function Index() {
 
   return (
     <div>
-      <Form method="post" onSubmit={handleSubmit} className="mb-8">
-        <input type="hidden" name="_action" value="create" />
+      <Form method="post" onSubmit={handleSubmit} className="mb-8 p-4">
         <div className="flex">
-          <input
+          <Input
             type="text"
             name="name"
             value={newListName}
             onChange={(e) => setNewListName(e.target.value)}
             placeholder="Enter new list name"
-            className="flex-grow rounded-l-md border px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
             required
           />
-          <button
-            type="submit"
-            className="rounded-r-md bg-blue-500 px-4 py-2 text-white hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
-          >
-            Add List
-          </button>
+          <Button>Add List</Button>
         </div>
       </Form>
 
-      <ul className="space-y-4">
+      <ul className="space-y-4 p-4">
         {shoppingLists.map((list) => (
           <li
             key={list.id}
